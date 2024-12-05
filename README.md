@@ -1,2 +1,4 @@
 # EggstraToken
+Eggstra is a playful yet revolutionary token designed for simplicity and fun in the crypto space. Eggstra focuses on being "extra" in the simplest ways—extra accessibility, extra fun, and extra community-driven utility. Picture Eggstra as the crypto twist on finding an extra egg in your dozen—a small bonus with big potential.
+Eggstra is more than just a token—it’s a lifestyle for those who want extra without the fuss. Built on the Solana network, Eggstra combines lightning-fast transactions with a low carbon footprint. Whether you’re staking, trading, or holding, Eggstra ensures you get that “eggstra” value. Its intuitive concept and cheerful branding make it a favorite for everyone, from crypto enthusiasts to everyday users to egg lovers.
 ”Because everyone deserves a little Eggstra.”
