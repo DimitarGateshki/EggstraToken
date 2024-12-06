@@ -40,10 +40,22 @@ body{
     align-items: center;
     justify-content: center;
     background-image: url(../imgs/MOVE.gif);
-    background-size: 100% 120%;
+    background-size: cover;
+    background-position: top;
     height: 80vh;
     max-height: 800px;
     
+
+}
+.coin-logo span{
+    color: #F29F58;
+    font-weight: 300;
+
+}
+
+.title span{
+    color: #F29F58;
+    font-weight: 300;
 
 }
 
@@ -144,7 +156,7 @@ div .menu{
     padding:  10px;
     border: 1px solid #282828;
     border-radius: 15px;
-    background-color: #E38E49;
+    background-color: #F29F58;
     transition: all 0.6s;
 }
 
