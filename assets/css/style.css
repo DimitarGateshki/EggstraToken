@@ -39,8 +39,8 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
-    background-image: url(../imgs/banner.png);
-    background-size: 100% 100%;
+    background-image: url(../imgs/MOVE.gif);
+    background-size: 100% 120%;
     height: 80vh;
     max-height: 800px;
     
@@ -250,11 +250,11 @@ div .menu ul .menu{
 
 .services .main-content{
     display: flex;
+    flex-direction: column;
     align-items: flex-start;
     justify-content: center;
     padding: 40px;
     padding-top: 15vh;
-    gap: 85px;
     max-width: 1200px;
     width: 100%;
 }
@@ -263,10 +263,24 @@ div .menu ul .menu{
     width: 50%;
 }
 
+.services .col{
+    width: 100%;
+}
+
 .section-title{
     font-size: 16px;
     font-weight: 600;
     margin-top: 0;
+}
+
+.services ol{
+    display: flex;
+    margin: 0;
+}
+
+.services ol li{
+    display: flex;
+    margin: 0;
 }
 
 ol{
@@ -281,7 +295,7 @@ ol li , .service-title, .service-section > p{
     font-size: 18px;
     font-weight: 200;
     line-height: 28px;
-    color: #48535B;
+    color: #fff;
     counter-increment: num; 
     cursor: pointer;
 
@@ -294,7 +308,7 @@ ol li::before {
     margin-right: 5px;
     border: 1px solid #9AA6AC;
     padding: 5px;
-    border-radius: 2px;
+    border-radius: 2px 2px 0 0px;
 } 
 
 
@@ -305,12 +319,11 @@ ol li::before {
 
 .service-title::before { 
     content: var(--index-content); 
-    color: #fff; 
+    color: #243950; 
     font-size: 13px; 
     margin-right: 5px;
     padding: 5px;
-    border-radius: 2px;
-    background:#252C32;
+    background:#fff;
 
 } 
 
@@ -319,7 +332,7 @@ ol li::before {
     width: 60%;
     margin-top: 50px;
     margin-bottom: 0;
-    color: #020202;
+    color: #fff;
 }
 
 .list_container{
@@ -333,6 +346,7 @@ ol li::before {
     list-style-type: none;
     padding: 0;
     margin: 0;
+    color: #fff;
 }
 
 .list_container > ul > li{
@@ -506,16 +520,20 @@ ol li::before {
 
 .services .main-content .accordion.active{
     display: inline-block;
+    background-color: #243950;
+    padding: 20px 10px;
+    border: 1px solid #243950;
 }
 
 .service.active{
-    color: #0E73F6;
+    color: #243950;
 }
 
 .service.active::before{
     color: #fff;
-    background:#252C32;
+    background:#243950;
     border: none;
+    border: 1px solid #243950;
 }
 
 .contact .cpw{
