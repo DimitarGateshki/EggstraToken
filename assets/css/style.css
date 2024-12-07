@@ -149,7 +149,7 @@ div .menu{
 
 }
 
-.links .buy{
+.links .buy, .button-community{
     display: flex;
     align-items: center;
     justify-content: center;
@@ -160,6 +160,54 @@ div .menu{
     transition: all 0.6s;
 }
 
+a{
+    text-decoration: none !important;
+}
+.button-community{
+    padding: 10px 20px;
+    margin: 0 30px;
+    width: 70%;
+    gap: 10px;
+    text-decoration: none;
+    font-size: 18px;
+    transition: all 0.6s;
+
+} 
+
+.button-community:hover{
+    border: 1px solid #fff;
+}
+
+.button-community img{
+    height: 25px;
+    width: 25px;
+    margin: 15px;
+}
+
+.instagram{
+    background: #833ab4;
+    background: linear-gradient(
+        to right,
+        #833ab4,#fd1d1d,#fcb045
+    );
+
+    color: #fff;
+}
+
+.discord{
+    background: #7289DA;
+    color: #fff;
+}
+
+.x{
+    background: #000;
+    color: #fff;
+}
+
+.telegram{
+    background: #0088cc;
+    color: #fff;
+}
 .links .buy:hover{
     background-color: #e4a36d;
 }
@@ -434,15 +482,32 @@ ol li::before {
     padding-right: 100px;
 
 }
+.contact .subtitle{
+    width: 100%;
+    text-align: center;
+    margin: 0;
+}
+
+.contact .section-title{
+    width: 100%;
+    margin: 0;
+}
+
+.contact .col{
+    gap: 30px;
+    display: flex;
+    flex-direction: column;
+}
 
 .contact .main-content{
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     align-items: flex-start;
     justify-content: center;
     background-color: rgba(0, 0, 0, 0.4);
-    padding: 40px;
-    gap: 85px;
+    padding: 40px 40px 0 40px;
+    gap: 0;
     max-width: 1200px;
     width: 100%;
     border-radius: 14px;
@@ -558,52 +623,28 @@ ol li::before {
 
     .top-banner,
     .services,
-    .about,
-    .contact {
-        height: 120vh;
-        
+    .about {
+        height: 100%;        
 
-    }
-
-    .contact .main-content{
-        max-width: 90%;
-
-    }
-
-}
-
-@media (max-width: 990px) {
-    .top-banner,
-    .services,
-    .about,
-    .contact {
-        padding-left: 20px;
-        padding-right: 20px;
-        height: 120vh;
-
-    }
-
-    
-    .top-banner{
-        background-position: center;
-        background-size: cover;
     }
 
     .top-banner .main-content{
-        padding: 0 40px ;
-        gap: 5%;
+        padding: 60px;
     }
-    .navigation .lang{
-        width: 40%;
-        padding-top: 35px;
+}
+
+@media (max-width: 990px) {
+
+    .top-banner .main-content{
+        padding: 60px;
     }
 
     .navigation .logo{
-        width: 20%;
+        width: 25%;
     }
 
     div .menu{
-        width: 40%;
+        width: 45%;
     }
 
     .services .main-content {
@@ -643,34 +684,36 @@ ol li::before {
 
 @media (max-width: 800px) {
 
-   
-
     .services, .about, .contact{
         height: fit-content;
     }
     
+    .about .logo figure img{
+        max-height: 220px;
+    }
+
     .contact{
         padding-top: 30px;
         padding-bottom: 30px;
     }
     .contact .main-content{
-        padding-left:9px ;
-        padding-right: 9px;
+        padding-left: 15px ;
+        padding-right: 15px;
+        padding-bottom: 30px;
     }
-    .services .main-content .col, .about .main-content .col, .contact .main-content .col {
-        margin-bottom: 20px;
-        width: 90%;
-        
+    .contact .main-content .col {
+        width: 50%;        
     }
 
     .services .main-content, .about .main-content{
         padding: 0;
-        padding-top: 60px;
+        padding: 60px 0;
         flex-wrap: wrap; 
 
     }
+
     .top-banner .main-content{
-        padding: 0 10px;
+        padding:40px 0  30px 0;
     }
 
     div .menu {
@@ -678,59 +721,26 @@ ol li::before {
         justify-content: flex-end;
     }
 
-   
-
     .about p{
         font-size: 18px;
-        margin-top: 20px;
-    }
-    .about{
-        background-image: url('../imgs/about-mobile.webp');
     }
 
-    .about .main-content{
-        
-        padding-bottom: 200px;
+    .about , .services, .contact{
+        padding-left: 20px;
+        padding-right: 20px;
     }
 
+    .services .col{
+        width: 100%;
+    }
+    
     .slogan{
         width: 100%;
     }
 
-    .contact .main-content{
-        flex-wrap: wrap;
+    .contact .subtitle{
+        margin: 30px;
     }
-
-    .col1 .cnt, .col2 .cnt {
-       width: 100%;
-    }
-
-    .contact .contact-type {
-        margin-bottom: 0;
-    }
-    .contact .contact-info {
-        margin-top: 0;
-        margin-bottom: 0;
-    }
-    .contact .col2 .slogan{
-        margin-top: 0;
-    }
-    .contact img, .contact figure{
-        text-align: center;
-    }
-    .contact .socials .center{
-        text-align: center;
-    }
-    .contact figure{
-        margin-top: 25px;
-        margin-bottom: 25px;    
-    }
-    .contact .media{
-        align-items: center;
-        justify-content: center;
-        width: 100%;
-    }
-
 
     .large{
         display: none;
@@ -751,6 +761,7 @@ ol li::before {
         z-index: 100;
         transition: display 1s ease-in-out;
     }
+
     .links{
         flex-direction: column;
         margin: 0;
@@ -771,30 +782,46 @@ ol li::before {
 }
 
 @media (max-width: 600px) {
-    .top-banner{
-        height: fit-content;
+    
+    .navigation .logo {
+        width: 50%;
     }
 
-    .top-banner .main-content{
-        height: 90%;
-        
-        
+    .top-banner .main-content {
+        padding: 80px 0 80px 0;
     }
 
-    .top-banner .main-content h1{
+    .about .col{
         width: 100%;
-        margin: 20px 0;
     }
 
-    .slider{
-        right: -21px;
+    .about .logo figure img{
+        max-height: 170px;
     }
 
-    .top-banner,
-    .services,
-    .about,
-    .contact {
-        max-height: fit-content;
+    .about .main-content .logo{
+        margin: 0;
+        width: 100%;
+    }
+
+    .about .col-2 p{
+        margin: 25px 0 0 0;
+        text-align: justify;
+
+    }
+
+    .about{
+        padding-bottom: 20px;
+    }
+
+    .services .main-content, .about .main-content{
+        padding: 40px 0;
+    }
+    
+    .contact .main-content .col {
+        width: 100%;
+        gap: 20px;
+        margin-bottom: 20px;
     }
 }
 
