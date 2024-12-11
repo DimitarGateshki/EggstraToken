@@ -12,6 +12,28 @@
         
 }
 
+.count-down{
+    background-color: #F29F58;
+    color: #fff;
+    text-transform: uppercase;
+    text-align: center;
+    margin: 0;
+    padding: 10px 0;
+}
+
+.count-down p, .count-down span{
+    padding: 0;
+    margin: 0;
+    font-weight: 400;
+
+}
+.count-down span{
+
+    font-weight: 600;
+
+}
+
+
 body{
     margin: 0;
     padding: 0;
@@ -39,7 +61,7 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
-    background-image: url(../imgs/MOVE.gif);
+    background-image: url(../imgs/FNL3.gif);
     background-size: cover;
     background-position: top;
     height: 80vh;
@@ -60,7 +82,7 @@ body{
 }
 
 .top-banner .main-content{
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(0, 0, 0, 0.6);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -210,6 +232,7 @@ a{
 }
 .links .buy:hover{
     background-color: #e4a36d;
+    border: 1px solid #fff;
 }
 
 .links .buy:hover a{
@@ -296,27 +319,36 @@ div .menu ul .menu{
     display: flex;
     align-items: flex-start;
     justify-content: center;
-    background: #fff url(../imgs/services.webp);
-    background-size: contain;
-    background-repeat: no-repeat;
+    background-image: url(../imgs/FNL2.gif);
+    background-size: cover;
+    background-repeat: repeat-x;
     background-position: center;
     height: 100vh;
     max-height: 800px;
+    overflow: hidden;
+}
 
+.ops-container{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
     padding-left: 100px;
     padding-right: 100px;
-    overflow: hidden;
 }
 
 .services .main-content{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    flex-wrap: wrap;
     align-items: flex-start;
-    justify-content: center;
+    justify-content: flex-start;
     padding: 40px;
     padding-top: 15vh;
     max-width: 1200px;
     width: 100%;
+    gap: 30px;
+    padding-bottom: 80px;
+
 }
 
 .col{
@@ -324,35 +356,45 @@ div .menu ul .menu{
 }
 
 .services .col{
-    width: 100%;
+    width: 30%;
+}
+
+.services .col-2{
+    width: 50%;
 }
 
 .section-title{
-    font-size: 16px;
+    font-size: 18px;
     font-weight: 600;
     margin-top: 0;
+    color: #fff;
+    width: 100%;
 }
 
-.services ol{
-    display: flex;
-    margin: 0;
+.service{
+    background-color: rgba(36 ,57 ,80, 0.7);
+    width: 100%;
+    padding: 15px 10px ;
+    color: #fff;
+    font-size: 20px;
+    border: 1px solid #9AA6AC;
 }
 
-.services ol li{
-    display: flex;
-    margin: 0;
+.col > .service{
+    border-radius: 15px 15px 0 0;
 }
 
-ol{
-    margin:  40px 0 0 0;
-    padding: 0;
-    list-style: none; 
-    counter-reset: num; 
+.col > .service ~ .service{
+    border-radius: 0;
+}
+
+.service.last{
+    border-radius: 0 0 15px 15px !important;
 }
 
 ol li , .service-title, .service-section > p{
     margin: 15px 0;
-    font-size: 18px;
+    font-size: 20px;
     font-weight: 200;
     line-height: 28px;
     color: #fff;
@@ -361,39 +403,18 @@ ol li , .service-title, .service-section > p{
 
 }
 
-ol li::before { 
-    content: "0" counter(num); 
-    color: #9AA6AC; 
-    font-size: 13px; 
-    margin-right: 5px;
-    border: 1px solid #9AA6AC;
-    padding: 5px;
-    border-radius: 2px 2px 0 0px;
-} 
-
-
+.service-section{
+    background-color: #243950;
+    border-radius: 15px;
+}
 
 .service-title{
     margin: 0 0 40px 0;
 }
 
-.service-title::before { 
-    content: var(--index-content); 
-    color: #243950; 
-    font-size: 13px; 
-    margin-right: 5px;
-    padding: 5px;
-    background:#fff;
 
-} 
 
-.service-section > .bold{
-    font-weight: 600;
-    width: 60%;
-    margin-top: 50px;
-    margin-bottom: 0;
-    color: #fff;
-}
+
 
 .list_container{
     display: flex;
@@ -471,7 +492,7 @@ ol li::before {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    background: #fff url(../imgs/contact.webp);
+    background: #fff url(../imgs/community.webp);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: left;
@@ -505,7 +526,7 @@ ol li::before {
     flex-wrap: wrap;
     align-items: flex-start;
     justify-content: center;
-    background-color: rgba(0, 0, 0, 0.4);
+    background-color: rgba(0, 0, 0, 0.6);
     padding: 40px 40px 0 40px;
     gap: 0;
     max-width: 1200px;
@@ -597,13 +618,15 @@ ol li::before {
 
 .services .main-content .accordion.active{
     display: inline-block;
-    background-color: #243950;
+    background-color: rgba(36 ,57 ,80, 0.7);
     padding: 20px 10px;
-    border: 1px solid #243950;
+    width: 100%;
 }
 
 .service.active{
     color: #243950;
+    background-color: #fff;
+    border: none;
 }
 
 .service.active::before{
@@ -619,6 +642,52 @@ ol li::before {
     font-weight: 100;
     font-size: 14px;
 }
+
+
+p , #demo{
+    animation: fadeIn 2s !important;
+    -webkit-animation: fadeIn 2s !important;
+    -moz-animation: fadeIn 2s !important;
+    -o-animation: fadeIn 2s !important;
+    -ms-animation: fadeIn 2s !important;
+  }
+  
+  @keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+  
+  @-moz-keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+  
+  @-webkit-keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+  
+  @-o-keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+  
+  @-ms-keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+
+
+  .disabled {
+    pointer-events: none;
+    cursor: default;
+    background-color: #9AA6AC !important;
+  }
+  .disabled:hover {
+    background-color: #9AA6AC !important;
+
+  }
+
 @media (max-width: 1250px) {
 
     .top-banner,
@@ -686,6 +755,7 @@ ol li::before {
 
     .services, .about, .contact{
         height: fit-content;
+        max-height: none;
     }
     
     .about .logo figure img{
@@ -725,7 +795,7 @@ ol li::before {
         font-size: 18px;
     }
 
-    .about , .services, .contact{
+    .about , .contact{
         padding-left: 20px;
         padding-right: 20px;
     }
@@ -783,6 +853,11 @@ ol li::before {
 
 @media (max-width: 600px) {
     
+    .ops-container{
+        padding-left: 20px;
+        padding-right: 40px;
+    }
+
     .navigation .logo {
         width: 50%;
     }
