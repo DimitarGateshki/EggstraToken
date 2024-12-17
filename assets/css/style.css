@@ -136,7 +136,7 @@ div .menu{
     list-style-type: none;
     font-size: 16px;
     color: #EEF0F2;
-    width: 40%;
+    width: 50%;
 }
 
 
@@ -350,6 +350,62 @@ div .menu ul .menu{
     padding-bottom: 80px;
 
 }
+
+/*NEW*/
+.tokenomics .main-content{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 15vh;
+    max-width: 1200px;
+    width: 100%;
+    gap: 00px;
+    padding-bottom: 80px;
+    height: fit-content;
+
+}
+
+.tokenomics{
+    padding-left: 100px;
+    padding-right: 100px;
+    height: fit-content;
+}
+
+.tokenomics .col{
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    color: #EEF0F2;
+}
+.tokenomics .col-2{
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+}
+#tokenomics-title{
+    font-weight: 800;
+    font-size: 18px;
+    margin: 0;
+}
+
+#tester{
+    width: 100%;
+    height: auto;
+    cursor: pointer;
+}
+.whitepaper{
+    text-align: right;
+    color: #9BCFFD;
+    text-decoration: underline !important;
+    width: 100%;
+}
+
+
 
 .col{
     width: 50%;
@@ -697,6 +753,11 @@ p , #demo{
 
     }
 
+    .tokenomics .main-content{
+        padding-top: 10vh;
+
+    }
+
     .top-banner .main-content{
         padding: 60px;
     }
@@ -713,7 +774,7 @@ p , #demo{
     }
 
     div .menu{
-        width: 45%;
+        width: 65%;
     }
 
     .services .main-content {
@@ -853,7 +914,7 @@ p , #demo{
 
 @media (max-width: 600px) {
     
-    .ops-container{
+    .ops-container, .tokenomics{
         padding-left: 20px;
         padding-right: 40px;
     }
@@ -889,7 +950,7 @@ p , #demo{
         padding-bottom: 20px;
     }
 
-    .services .main-content, .about .main-content{
+    .services .main-content, .about .main-content, .tokenomics .main-content{
         padding: 40px 0;
     }
     
